@@ -20,6 +20,7 @@ void setup() {
   Serial.print("\nHejnas IMU ");
   Serial.println(version);
 
+  //Sprawdzenie czy na i2c jest podłączony LSM6DS3
   byte connectionStatus = CheckConnectionLSM6DS3();
   if(connectionStatus = true)Serial.println("LSM6DS3 connection OK");
   else {
